@@ -28,8 +28,8 @@ join file c on c.size=g.size and c.md5=g.md5 and c.ctime=g.ctime
 cur.execute(sql)
 for rec in cur:
     try:
-        os.unlink(rec['path'])
-        r=kdll.CreateSymbolicLinkW(rec['path'],rec['path1'],0)   
+        #os.unlink(rec['path'])
+        #r=kdll.CreateSymbolicLinkW(rec['path'],rec['path1'],0)   
         print rec['path'], rec['path1']
     except:
         print "err:%s"%(rec['path1'])
